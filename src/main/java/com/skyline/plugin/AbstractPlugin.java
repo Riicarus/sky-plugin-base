@@ -97,7 +97,7 @@ public abstract class AbstractPlugin {
 
     @Override
     public final int hashCode() {
-        return getPluginInfo().hashCode();
+        return getPluginInfo().getId();
     }
 
     @Override

@@ -12,6 +12,8 @@ import java.util.Objects;
  */
 public class PluginInfo {
 
+    private Integer id;
+
     private String version;
 
     private String name;
@@ -50,7 +52,18 @@ public class PluginInfo {
 
     @Override
     public int hashCode() {
-        return Objects.hash(version, name, interfaceName);
+        if (id == null) {
+            id = Objects.hash(version, name, interfaceName);
+        }
+        return id;
+    }
+
+    public Integer getId() {
+        return id == null ? hashCode() : id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getVersion() {
