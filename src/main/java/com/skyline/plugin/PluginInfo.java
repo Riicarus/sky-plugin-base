@@ -35,7 +35,8 @@ public class PluginInfo {
     @Override
     public String toString() {
         return "PluginInfo{" +
-                "version='" + version + '\'' +
+                "id=" + id +
+                ", version='" + version + '\'' +
                 ", name='" + name + '\'' +
                 ", interfaceName='" + interfaceName + '\'' +
                 ", author='" + author + '\'' +
